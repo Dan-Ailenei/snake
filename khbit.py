@@ -74,9 +74,8 @@ class KBHit:
             return msvcrt.getch().decode('utf-8')
 
         else:
-            c = sys.stdin.read(1)
             while self.kbhit():
-                sys.stdin.read(1)
+                c = sys.stdin.read(1)
             return c
 
     def getarrow(self):
